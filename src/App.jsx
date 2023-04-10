@@ -2,8 +2,12 @@ import { useState, useEffect } from "react";
 import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
 import axios from "axios";
+import { useContext } from "react";
+import BookContext from "./Context/BookContext";
 
 function App() {
+  const { count, incrementCount } = useContext(BookContext);
+
   const [books, setBooks] = useState([]);
 
   const getBooks = async () => {
