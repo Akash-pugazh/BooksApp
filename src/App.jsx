@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     getBooks();
-  }, []);
+  }, [getBooks]);
 
   return (
     <div className="App">
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
